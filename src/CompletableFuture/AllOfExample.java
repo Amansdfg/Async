@@ -1,8 +1,14 @@
 package CompletableFuture;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
+
+/*
+    5. CompletableFuture.allOf()
+    Запуск нескольких задач и ожидание завершения всех (allOf)
+    allOf() завершится только после выполнения всех переданных задач.
+
+ */
 
 public class AllOfExample {
     public static void main(String[] args) throws Exception {
@@ -11,7 +17,7 @@ public class AllOfExample {
             CompletableFuture.runAsync(() -> delayPrint("Задача 2", 3))
         );
 
-        future.get(); // Ожидаем завершения всех задач
+        future.get();
         System.out.println("Все задачи завершены!");
     }
 

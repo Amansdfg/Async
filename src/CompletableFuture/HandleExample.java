@@ -2,6 +2,13 @@ package CompletableFuture;
 
 import java.util.concurrent.CompletableFuture;
 
+/*
+    8. CompletableFuture.handle()
+    handle() — обработка ошибки и выполнение альтернативной логики
+
+
+    handle() позволяет как обработать исключение, так и продолжить выполнение с другим результатом.
+ */
 public class HandleExample {
     public static void main(String[] args) throws Exception {
         CompletableFuture<Object> future = CompletableFuture.supplyAsync(() -> {
@@ -14,6 +21,6 @@ public class HandleExample {
             return res;
         });
 
-        System.out.println(future.get()); 
+        System.out.println(future.get());
     }
 }
